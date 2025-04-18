@@ -19,6 +19,7 @@
   color: aliceblue;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0.6rem 0;
   animation: typing-dots 2s steps(10) infinite;
   &.error {
     color: red;

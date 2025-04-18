@@ -13,7 +13,7 @@ export default function Home() {
   const [loading, setLoading] = useState();
   const [err, setError] = useState();
 
-  SetWallpaper();
+  SetWallpaper(loading);
 
   useEffect(() => {
     getMcList(setData, setLoading, setError, page);
