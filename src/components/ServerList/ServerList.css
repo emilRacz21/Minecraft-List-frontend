@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-color: rgba(32, 37, 41, 0.928);
+  background-color: rgba(32, 37, 41, 0.888);
   list-style: none;
   margin: 0.7rem auto;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.464);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
   border-radius: 0.3rem;
 }
 .server-container:hover {
@@ -23,7 +23,6 @@ ul {
   justify-content: center;
 }
 img {
-  width: 4vw;
   height: 4vw;
   margin: auto 0;
   padding: 0 0.5rem;
@@ -49,11 +48,10 @@ img {
 }
 
 .fav-section img {
-  width: 1.2vw;
   height: 1.2vw;
 }
 .motd-desc {
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   white-space: pre-wrap;
 }
 .content-server {
@@ -64,4 +62,48 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button-next-section {
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.button-next-section button {
+  font-size: 1.2rem;
+  margin: 1rem;
+  width: 7rem;
+  height: 3rem;
+  color: white;
+  border: none;
+  transition: ease 0.3s;
+  box-shadow: 0px 2px 0px 0px rgb(194, 194, 194) inset,
+    0px 2px 0px 0px rgba(60, 58, 58, 0.956);
+  &:hover {
+    background-color: rgb(93, 92, 92);
+  }
+}
+.page-next {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+}
+.nav-button {
+  transition: all 0.3s ease;
+}
+
+.active-button {
+  background-color: rgb(131, 133, 131);
+  cursor: pointer;
+}
+
+.disabled-button {
+  background-color: rgb(93, 92, 92);
+  cursor: no-drop;
+  opacity: 0.6;
 }

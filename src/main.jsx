@@ -1,9 +1,11 @@
 import { createRoot } from "react-dom/client";
-import Home from "./components/Home/Home.jsx";
+import ServerList from "./components/ServerList/ServerList.jsx";
 import "./index.css";
+import Header from "./components/Header/Header.jsx";
 
 createRoot(document.getElementById("root")).render(
   <>
-    <Home />
+    <Header />
+    <ServerList />
   </>
 );
