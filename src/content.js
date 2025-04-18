@@ -1,7 +1,7 @@
-import logo from "../public/images/minecraft-logo.png";
-import linkedIn from "../public/svg/linkedin.svg";
-import instagram from "../public/svg/instagram.svg";
-import tiktok from "../public/svg/tiktok.svg";
+import logo from "/public/images/minecraft-logo.png";
+import linkedIn from "/public/svg/linkedin.svg";
+import instagram from "/public/svg/instagram.svg";
+import tiktok from "/public/svg/tiktok.svg";
 export const footer = {
   logo,
   logoAlt: "Oddity Emporium logo",
