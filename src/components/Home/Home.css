@@ -1,0 +1,67 @@
+.server-container {
+  width: 45vw;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgba(32, 37, 41, 0.928);
+  list-style: none;
+  margin: 0.7rem auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.464);
+  border-radius: 0.3rem;
+}
+.server-container:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  justify-content: center;
+}
+img {
+  width: 4vw;
+  height: 4vw;
+  margin: auto 0;
+  padding: 0 0.5rem;
+}
+
+.server-container li {
+  width: 30vw;
+}
+.fav-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.players-online {
+  display: flex;
+  margin: 0.2rem 0;
+}
+.fav-section h2 {
+  color: rgb(169, 170, 170);
+  font-size: 1.1vw;
+  margin: auto 0;
+}
+
+.fav-section img {
+  width: 1.2vw;
+  height: 1.2vw;
+}
+.motd-desc {
+  font-size: 1.5vw;
+  white-space: pre-wrap;
+}
+.content-server {
+  width: 20rem;
+}
+.desc-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
