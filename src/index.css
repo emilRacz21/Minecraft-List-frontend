@@ -16,7 +16,7 @@
       rgb(20, 20, 20) 50%,
       rgb(20, 20, 20) 50%
     ),
-    url("../public/images/day.jpg");
+    url("/public/images/day.jpg");
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,6 +32,6 @@
       #141414 50%,
       rgb(20, 20, 20) 50%
     ),
-    url("../public/images/night.png");
+    url("/public/images/night.png");
   background-repeat: no-repeat;
 }
