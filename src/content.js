@@ -48,3 +48,6 @@ export const slogans = [
   "TO EXPLORE ENDLESSLY",
   "TO BE A #MITOMAN",
 ];
+import tnt from "../src/assets/images/tnt-anim.png";
+import dragon from "../src/assets/images/dragon-anim.png";
+export const loading = [tnt, dragon];

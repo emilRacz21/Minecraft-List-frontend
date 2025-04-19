@@ -12,10 +12,9 @@
 .loading-squares {
   width: 200px;
   height: 200px;
-  background-image: url("/src/assets/images/tnt-anim.png");
   background-repeat: no-repeat;
   background-size: 3200px 200px;
-  animation: play 0.5s steps(16) infinite;
+  animation: play 0.7s steps(16) infinite;
 }
 
 @keyframes play {
