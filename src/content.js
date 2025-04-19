@@ -50,4 +50,6 @@ export const slogans = [
 ];
 import tnt from "../src/assets/images/tnt-anim.png";
 import dragon from "../src/assets/images/dragon-anim.png";
-export const loading = [tnt, dragon];
+import creeper from "../src/assets/images/creeper-anim.png";
+import crafting from "../src/assets/images/crafting-anim.png";
+export const loading = [tnt, dragon, creeper, crafting];

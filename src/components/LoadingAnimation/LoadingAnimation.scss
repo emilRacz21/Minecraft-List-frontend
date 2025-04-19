@@ -13,8 +13,8 @@
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
-  background-size: 3200px 200px;
-  animation: play 0.7s steps(16) infinite;
+  background-size: 6400px 200px;
+  animation: play 1.2s steps(32) infinite;
 }
 
 @keyframes play {
@@ -22,7 +22,7 @@
     background-position: 0 0;
   }
   to {
-    background-position: -3200px 0;
+    background-position: -6400px 0;
   }
 }
 
