@@ -1,17 +1,21 @@
+@use "../../index.scss" as *;
+
 .server-container {
   width: 45vw;
+  animation: fade-inn 1s;
   transition: transform 0.3s ease;
   text-decoration: none;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-color: #202529e2;
+  background-color: #202529f5;
   list-style: none;
   margin: 0.7rem auto;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
   border-radius: 0.3rem;
 }
+
 .server-container:hover {
   transform: scale(1.05);
   cursor: pointer;

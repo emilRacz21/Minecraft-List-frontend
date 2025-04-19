@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { getMcList } from "../Api/Api.jsx";
-import "./ServerList.css";
-import MinecraftMotd from "../MinecraftMotd.jsx";
-import ping from "/images/ping.png";
-import heart from "/images/heart.png";
-import dislike from "/images/dislike.png";
+import "./ServerList.scss";
+import MinecraftMotd from "../MinecraftMotd/MinecraftMotd.jsx";
+import ping from "../../assets/images/ping.png";
+import heart from "../../assets/images/heart.png";
+import dislike from "../../assets/images/dislike.png";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation.jsx";
 import SetWallpaper from "../SetWallpaper.jsx";
 export default function Home() {
@@ -34,7 +34,6 @@ export default function Home() {
                   <div className="desc-section">
                     <MinecraftMotd motd={server.description} />
                   </div>
-
                   <section className="fav-section">
                     <div className="players-online">
                       <h2>{` ${server.players_online}/${server.players_max}`}</h2>
@@ -69,7 +68,6 @@ export default function Home() {
             >
               Previous
             </button>
-
             <button
               onClick={() => {
                 const totalPages = Math.ceil(data.count / 10);

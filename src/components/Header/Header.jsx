@@ -1,5 +1,5 @@
 import "../Header/Header.scss";
-import logo from "../../../public/images/minecraft-logo.png";
+import logo from "../../assets/images/minecraft-logo.png";
 export default function Header() {
   return (
     <header className="header-container">

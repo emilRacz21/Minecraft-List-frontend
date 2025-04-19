@@ -1,4 +1,4 @@
-import logo from "/public/images/minecraft-logo.png";
+import logo from "./assets/images/minecraft-logo.png";
 import linkedIn from "./assets/svg/linkedin.svg";
 import instagram from "./assets/svg/instagram.svg";
 import tiktok from "./assets/svg/tiktok.svg";

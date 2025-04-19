@@ -16,9 +16,8 @@
       rgb(20, 20, 20) 50%,
       rgb(20, 20, 20) 50%
     ),
-    url("/public/images/day.jpg");
+    url("./assets/images/day.jpg");
 
-  background-size: cover;
   background-repeat: no-repeat;
 }
 .night {
@@ -32,6 +31,37 @@
       #141414 50%,
       rgb(20, 20, 20) 50%
     ),
-    url("/public/images/night.png");
+    url("./assets/images/night.png");
   background-repeat: no-repeat;
+}
+
+@keyframes fade-inn {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes show-details {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%) translate(14%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%) translate(14%);
+  }
+}
+
+@keyframes blur-in {
+  0% {
+    filter: blur(0rem);
+  }
+  100% {
+    filter: blur(var(--blur-intensity));
+  }
 }
