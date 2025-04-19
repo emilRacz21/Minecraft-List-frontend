@@ -7,6 +7,7 @@ import heart from "../../assets/images/heart.png";
 import dislike from "../../assets/images/dislike.png";
 import LoadingAnimation from "../LoadingAnimation/LoadingAnimation.jsx";
 import SetWallpaper from "../SetWallpaper.jsx";
+import SearchServer from "../SearchServer/SearchServer.jsx";
 export default function Home() {
   const [data, setData] = useState();
   const [page, setPage] = useState(1);
@@ -25,10 +26,10 @@ export default function Home() {
         <LoadingAnimation />
       ) : (
         <>
+          <SearchServer />
           {data.results.map((server, index) => {
             return (
               <div key={index}>
-                {console.log(server)}
                 <section className="server-container">
                   <img src={server.favicon} />
                   <div className="desc-section">

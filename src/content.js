@@ -31,6 +31,20 @@ export const footer = {
     { alt: "Instagram", img: instagram, href: "https://www.instagram.com/" },
     { alt: "TikTok", img: tiktok, href: "https://www.tiktok.com/" },
   ],
-  footerAuthor: "2024 Capyright: Oddity Emporium",
+  footerAuthor: "2025 Capyright: Minecraft Server List",
   footerCreated: "Created by: ER Studio",
 };
+
+export const slogans = [
+  "TO TEST YOUR SKILLS",
+  "TO MEET NEW FRIENDS",
+  "TO BUILD YOUR WORLD",
+  "TO START YOUR ADVENTURE",
+  "TO JOIN THE FUN",
+  "TO RULE THE BLOCKS",
+  "TO SHOW YOUR CREATIVITY",
+  "TO CONQUER CHALLENGES",
+  "TO TEAM UP OR GO SOLO",
+  "TO EXPLORE ENDLESSLY",
+  "TO BE A #MITOMAN",
+];

@@ -3,7 +3,7 @@ import { footer } from "../../content";
 export default function Footer() {
   return (
     <section className="footer-cont">
-      <div class="footer-bg"></div>
+      <div className="footer-bg"></div>
       <section className="footer-section">
         <div className="footer-container">
           <div className="footer-grid-1">
