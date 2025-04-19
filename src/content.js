@@ -1,5 +1,5 @@
 import logo from "./assets/images/minecraft-logo.png";
-import linkedIn from "./assets/svg/linkedin.svg";
+import linkedIn from "./assets/svg/linkedIn.svg";
 import instagram from "./assets/svg/instagram.svg";
 import tiktok from "./assets/svg/tiktok.svg";
 export const footer = {
