@@ -52,4 +52,6 @@ import tnt from "../src/assets/images/tnt-anim.png";
 import dragon from "../src/assets/images/dragon-anim.png";
 import creeper from "../src/assets/images/creeper-anim.png";
 import crafting from "../src/assets/images/crafting-anim.png";
-export const loading = [tnt, dragon, creeper, crafting];
+import piglin from "../src/assets/images/piglin-anim.png";
+import steve from "../src/assets/images/steve-anim.png";
+export const loading = [tnt, dragon, creeper, crafting, piglin, steve];
