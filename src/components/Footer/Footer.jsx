@@ -1,8 +1,27 @@
 import "./Footer.scss";
-import { footer } from "../../content";
+import { footer, dialogContents } from "../../content";
+import ShowModal from "../ShowModal/ShowModal";
+import { useState } from "react";
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [dialogContent, setDialogContent] = useState({
+    title: "",
+    description: "",
+  });
+  function handleselectedQuestion(index) {
+    setDialogContent(dialogContents[index]);
+    setIsModalOpen(true);
+  }
   return (
     <section className="footer-cont">
+      <ShowModal
+        modalStatus={isModalOpen}
+        modalDisable={setIsModalOpen}
+        title={dialogContent.title}
+        closeModal={setIsModalOpen}
+      >
+        <p>{dialogContent.description}</p>
+      </ShowModal>
       <div className="footer-bg"></div>
       <section className="footer-section">
         <div className="footer-container">
@@ -27,7 +46,16 @@ export default function Footer() {
           <div className="footer-grid-1">
             <h4>{footer.question}</h4>
             {footer.questions.map((items, index) => {
-              return <p key={index}>{items}</p>;
+              return (
+                <p
+                  key={index}
+                  onClick={() => {
+                    handleselectedQuestion(index);
+                  }}
+                >
+                  {items}
+                </p>
+              );
             })}
           </div>
           <div className="footer-grid-1">

@@ -1,26 +1,14 @@
-// export default function SetWallpaper(loading) {
-//   const currentDate = new Date();
-//   const hours = currentDate.getHours();
-
-//   if (loading == undefined) {
-//     document.body.style.backgroundColor = "#141414";
-//   } else {
-//     document.body.classList.remove("morning", "night", "loading");
-//     document.body.classList.add(
-//       `${hours > 6 && hours <= 18 ? "morning" : "night"}`
-//     );
-//   }
-// }
 import { useEffect } from "react";
 import dayImage from "../assets/images/day.jpg";
 import nightImage from "../assets/images/night.png";
 
 export default function SetWallpaper(loading) {
+  let root = document.getElementById("root");
   useEffect(() => {
     const currentDate = new Date();
     const hours = currentDate.getHours();
 
-    document.body.classList.remove("morning", "night");
+    root.classList.remove("morning", "night");
 
     const gradient = `linear-gradient(
       to bottom,
@@ -31,18 +19,18 @@ export default function SetWallpaper(loading) {
     )`;
 
     if (loading === undefined) {
-      document.body.style.backgroundColor = "#141414";
-      document.body.style.backgroundImage = "";
+      root.style.backgroundColor = "#141414";
+      root.style.backgroundImage = "";
     } else {
-      document.body.style.backgroundColor = "";
+      root.style.backgroundColor = "";
       const isDay = hours > 6 && hours <= 18;
 
-      document.body.style.backgroundImage = `${gradient}, url(${
+      root.style.backgroundImage = `${gradient}, url(${
         isDay ? dayImage : nightImage
       })`;
-      document.body.style.backgroundSize = "100vw 100vh";
-      document.body.style.backgroundPosition = "center";
-      document.body.style.backgroundRepeat = "no-repeat";
+      root.style.backgroundSize = "100vw 100vh";
+      root.style.backgroundPosition = "center";
+      root.style.backgroundRepeat = "no-repeat";
     }
-  }, [loading]);
+  }, [loading, root.classList, root.style]);
 }

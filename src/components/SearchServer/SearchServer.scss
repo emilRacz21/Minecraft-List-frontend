@@ -1,12 +1,5 @@
 @use "../../index.scss" as *;
 
-@font-face {
-  font-family: "Minecraft";
-  src: url("../../assets/fonts/Minecraft.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .search-section {
   width: 45vw;
   display: flex;

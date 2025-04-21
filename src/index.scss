@@ -5,6 +5,14 @@ $color-blue: rgb(37, 99, 215);
 $font-color-main-green: rgb(10, 174, 13);
 $border-green: rgb(83, 172, 83);
 $font-second: 2rem;
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("../../assets/fonts/Minecraft.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   font-family: "Pixelify Sans";
   margin: 0;
@@ -17,10 +25,15 @@ body {
   margin: 0;
 }
 #root {
+  transition: filter 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  &.active {
+    pointer-events: none;
+  }
 }
 
 @keyframes rotate {

@@ -2,7 +2,7 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 export default function Navbar({ title, children }) {
   let [name = "Getting started", secondName = ""] = title;
-  document.body.style.backgroundImage = "";
+  document.getElementById("root").style.backgroundImage = "";
   return (
     <section className="main-section">
       <section className="navbar-section">
