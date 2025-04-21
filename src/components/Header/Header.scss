@@ -11,8 +11,16 @@
   img {
     width: 6rem;
     height: 4.9rem;
-    margin: 0;
+    margin: 1rem;
     padding: 0;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img:hover {
+    transform: scale(0.9);
   }
 
   section {

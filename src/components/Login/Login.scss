@@ -1,0 +1,104 @@
+@use "../../index.scss" as *;
+.login-container {
+  animation: fade-inn 1s;
+  margin-top: 4rem;
+  box-shadow: -10px -10px 1px rgb(6, 36, 53) inset;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  background-color: $main-color;
+  img {
+    animation: rotate 2s;
+    transform: scale(0.8) rotateY(180deg) rotateZ(90deg);
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+.login-img {
+  margin: 2rem;
+  box-shadow: -10px -10px 1px rgb(1, 12, 18) inset;
+  border-radius: 50%;
+  padding: 3rem;
+  background-color: $background;
+}
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .red-login {
+    color: rgb(229, 39, 39);
+  }
+  p {
+    color: white;
+    margin: 0;
+  }
+  button {
+    background-color: $color-blue;
+    padding: 0.5vw 1.6vw;
+    margin-left: 2vw;
+    @include button;
+    &:hover {
+      background-color: rgb(90, 90, 90);
+    }
+  }
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  h2 {
+    font-size: 1.2vw;
+    margin: 0 0 1rem 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      @include form;
+      background-color: $background;
+      margin-bottom: 1rem;
+      height: 3vw;
+      width: 18vw;
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .login-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+    .login-img {
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    .login-section {
+      margin-bottom: 2rem;
+
+      h2 {
+        line-height: 2rem;
+
+        text-align: center;
+      }
+      form {
+        width: 100%;
+
+        input {
+          width: 90%;
+        }
+      }
+    }
+    .login-section {
+      width: 90%;
+    }
+  }
+}

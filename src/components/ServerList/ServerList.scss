@@ -21,8 +21,8 @@
   cursor: pointer;
 }
 ul {
+  flex-grow: 1;
   display: flex;
-  min-height: 25.4vw;
   flex-direction: column;
   padding: 0.5rem;
   justify-content: center;

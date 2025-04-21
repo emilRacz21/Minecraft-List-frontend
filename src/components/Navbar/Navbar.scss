@@ -1,0 +1,73 @@
+@use "../../index.scss" as *;
+
+$color-blue: rgb(10, 174, 13);
+$font-main: 4rem;
+
+@mixin navbar-color {
+  margin: 0;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.main-section {
+  animation: fade-inn 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar-nav {
+  display: flex;
+  margin: 0;
+
+  p {
+    margin: 0 1rem;
+    color: white;
+  }
+  .navbar-cl {
+    @include navbar-color;
+    color: white;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+  .navbar-c2 {
+    @include navbar-color;
+    color: $color-blue;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+.navbar-section {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50vw;
+  h2 {
+    margin: 0;
+    font-size: $font-main;
+    line-height: 6rem;
+    color: white;
+  }
+}
+.navbar-child {
+  width: 50vw;
+}
+
+@media (max-width: 1150px) {
+  .main-section {
+    .navbar-section {
+      .navbar-container {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

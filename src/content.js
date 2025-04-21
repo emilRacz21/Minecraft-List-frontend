@@ -55,3 +55,22 @@ import crafting from "../src/assets/images/crafting-anim.png";
 import piglin from "../src/assets/images/piglin-anim.png";
 import steve from "../src/assets/images/steve-anim.png";
 export const loading = [tnt, dragon, creeper, crafting, piglin, steve];
+
+import sword from "../src/assets/images/sword.webp";
+
+export const login = {
+  img: sword,
+  alt: "Key icon, login",
+  title: "Please log in to your account!",
+  userLabel: {
+    title: "Your username",
+    type: "text",
+  },
+  passwordLabel: {
+    title: "Your password",
+    type: "password",
+  },
+  desc: "*All labels are requrired",
+  descA: "*login or password is incorrect!",
+  button: "Log in",
+};
