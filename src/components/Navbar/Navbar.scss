@@ -1,6 +1,5 @@
 @use "../../index.scss" as *;
 
-$color-blue: rgb(10, 174, 13);
 $font-main: 4rem;
 
 @mixin navbar-color {
@@ -26,12 +25,12 @@ $font-main: 4rem;
     @include navbar-color;
     color: white;
     &:hover {
-      color: $color-blue;
+      color: $font-color-main-green;
     }
   }
   .navbar-c2 {
     @include navbar-color;
-    color: $color-blue;
+    color: $font-color-main-green;
 
     &:hover {
       color: white;
