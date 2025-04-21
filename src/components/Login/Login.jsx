@@ -10,6 +10,7 @@ const loginObj = {
 };
 
 export default function Login() {
+  const randomIndex = Math.floor(Math.random() * login.img.length);
   const [passwd, setPasswd] = useState({
     login: import.meta.env.VITE_USERNAME,
     password: import.meta.env.VITE_PASSWD,
@@ -38,7 +39,7 @@ export default function Login() {
     <Navbar title={["Getting started", "Login"]}>
       <section className="login-container">
         <div className="login-img">
-          <img src={login.img} alt={login.alt} />
+          <img src={login.img[randomIndex]} alt={login.alt} />
         </div>
         <section className="login-section">
           <h2>{login.title}</h2>

@@ -10,7 +10,7 @@
   background-color: $main-color;
   img {
     animation: rotate 2s;
-    transform: scale(0.8) rotateY(180deg) rotateZ(90deg);
+    transform: scale(0.8) rotateY(-180deg) rotateZ(0deg);
     width: 8vw;
     height: 8vw;
   }
@@ -32,6 +32,7 @@
   }
   p {
     color: white;
+    font-size: 1vw;
     margin: 0;
   }
   button {
@@ -53,7 +54,7 @@
   color: white;
 
   h2 {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     margin: 0 0 1rem 0;
   }
   form {

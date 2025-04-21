@@ -56,10 +56,30 @@ import piglin from "../src/assets/images/piglin-anim.png";
 import steve from "../src/assets/images/steve-anim.png";
 export const loading = [tnt, dragon, creeper, crafting, piglin, steve];
 
-import sword from "../src/assets/images/sword.webp";
+import sword_diamond from "../src/assets/images/sword_diamond.webp";
+import pickaxe_diamond from "../src/assets/images/pickaxe_diamond.webp";
+import chestplate_diamond from "../src/assets/images/chestplate_diamond.webp";
+import axe_diamond from "../src/assets/images/axe_diamond.webp";
+import sword_golden from "../src/assets/images/sword_golden.webp";
+import axe_golden from "../src/assets/images/axe_golden.webp";
+import chestplate_golden from "../src/assets/images/chestplate_golden.webp";
+import sword_netherite from "../src/assets/images/sword_netherite.webp";
+import axe_netherite from "../src/assets/images/axe_netherite.webp";
+import chestplate_netherite from "../src/assets/images/chestplate_netherite.webp";
 
 export const login = {
-  img: sword,
+  img: [
+    sword_diamond,
+    pickaxe_diamond,
+    chestplate_diamond,
+    axe_diamond,
+    sword_golden,
+    axe_golden,
+    chestplate_golden,
+    sword_netherite,
+    axe_netherite,
+    chestplate_netherite,
+  ],
   alt: "Key icon, login",
   title: "Please log in to your account!",
   userLabel: {
