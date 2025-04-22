@@ -87,7 +87,7 @@ export default function Create() {
               type={login.userLabel.type}
             />
           </form>
-          <section className="login-button">
+          <section className="create-button">
             <button onClick={handleLoginAccount}>Next</button>
           </section>
         </section>
