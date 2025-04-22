@@ -20,39 +20,16 @@
 
   button {
     background-color: $color-blue;
-    padding: 1vw 2vw;
+    padding: 0.7vw 5vw;
     font-size: 0.8vw;
+    font-size: 1vw;
     @include button;
     &:hover {
       background-color: rgb(90, 90, 90);
     }
   }
 }
-.error-message {
-  animation: shake 0.5s ease-in-out;
-}
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 .account-section {
   display: flex;
   flex-direction: column;

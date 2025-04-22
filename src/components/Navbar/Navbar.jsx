@@ -8,7 +8,10 @@ export default function Navbar({ title, children }) {
       <section className="navbar-section">
         <article className="navbar-container">
           <nav className="navbar-nav">
-            <Link className="navbar-cl" to={`/`}>
+            <Link
+              className="navbar-cl"
+              to={name == "Getting started" ? `/` : `/${name}`}
+            >
               {name}
             </Link>
             <p>-</p>

@@ -41,3 +41,15 @@ export function postUserName(data, setGetID) {
       // setLoading(false);
     });
 }
+
+export function postLogin(data, error) {
+  let url = `https://minecraft-list-backend.onrender.com/api/logins/`;
+  axios
+    .post(url, data)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      error(err.message);
+    });
+}

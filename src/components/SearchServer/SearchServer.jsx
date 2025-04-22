@@ -22,8 +22,6 @@ export default function SearchServer() {
   let gameType = type == undefined ? console.log("Loading") : type.results;
   let gameVersion =
     version == undefined ? console.log("Loading") : version.results;
-
-  console.log(gameVersion);
   return (
     <section className="search-section">
       <h1>FIND A MINECRAFT SERVER</h1>
