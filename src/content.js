@@ -90,7 +90,7 @@ export const login = {
     title: "Your password",
     type: "password",
   },
-  desc: "*All labels are requrired",
+  desc: "Create account",
   descA: "*login or password is incorrect!",
   button: "Log in",
 };

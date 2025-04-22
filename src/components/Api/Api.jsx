@@ -27,3 +27,17 @@ export function getMcTypes(setData) {
     setData(response.data);
   });
 }
+
+export function postUserName(data, setGetID) {
+  let url = `https://minecraft-list-backend.onrender.com/api/users/`;
+  axios
+    .post(url, data)
+    .then((response) => {
+      setGetID(response.data.id);
+    })
+    .catch((err) => {
+      console.log(err);
+      // setError(err);
+      // setLoading(false);
+    });
+}

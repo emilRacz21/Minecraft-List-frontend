@@ -66,7 +66,12 @@ export default function Login() {
             />
           </form>
           <section className="login-button">
-            <p className={!loginText ? "red-login" : ""}>
+            <p
+              className={!loginText ? "red-login" : "account-login"}
+              onClick={() => {
+                loginText && navigate("/New account");
+              }}
+            >
               {loginText ? login.desc : login.descA}
             </p>
             <button onClick={handleLoginAccount}>{login.button}</button>

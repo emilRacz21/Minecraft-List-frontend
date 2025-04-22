@@ -1,12 +1,14 @@
 import "./ShowModal.scss";
 import { createPortal } from "react-dom";
-
+import { useNavigate } from "react-router-dom";
 export default function ShowModal({
   modalStatus,
   children,
   title,
   modalDisable,
+  goto = "",
 }) {
+  const navigate = useNavigate();
   modalStatus
     ? (() => {
         document.getElementById("root").classList.add("active");
@@ -29,6 +31,9 @@ export default function ShowModal({
         <h2
           className="modal-x"
           onClick={() => {
+            if (goto != "") {
+              navigate(`/${goto}`);
+            }
             modalDisable(false);
           }}
         >

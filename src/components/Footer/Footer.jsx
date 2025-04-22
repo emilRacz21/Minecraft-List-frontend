@@ -2,7 +2,9 @@ import "./Footer.scss";
 import { footer, dialogContents } from "../../content";
 import ShowModal from "../ShowModal/ShowModal";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function Footer() {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [dialogContent, setDialogContent] = useState({
     title: "",
@@ -39,8 +41,22 @@ export default function Footer() {
               {footer.description}
             </p>
             <div className="footer-btn-grid">
-              <button className="footer-btn">{footer.button}</button>
-              <button className="footer-btn-no-border">{footer.buttona}</button>
+              <button
+                className="footer-btn"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                {footer.button}
+              </button>
+              <button
+                className="footer-btn-no-border"
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                {footer.buttona}
+              </button>
             </div>
           </div>
           <div className="footer-grid-1">
