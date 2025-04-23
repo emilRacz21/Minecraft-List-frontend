@@ -1,13 +1,24 @@
 import "./ShowModal.scss";
+import error from "../../assets/images/negative.png";
+import info from "../../assets/images/info.png";
+import success from "../../assets/images/positive.png";
 import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
+
+const icons = {
+  error,
+  info,
+  success,
+};
 export default function ShowModal({
   modalStatus,
+  iconType,
   children,
   title,
   modalDisable,
   goto = "",
 }) {
+  console.log(iconType);
   const navigate = useNavigate();
   modalStatus
     ? (() => {
@@ -27,9 +38,12 @@ export default function ShowModal({
       className={`show-modal ${modalStatus ? "active" : "disabled"}`}
     >
       <section className="dialog-nav">
-        <h2>{title}</h2>
-        <h2
-          className="modal-x"
+        <div className="class-info">
+          <img src={icons[iconType] || info} alt="" srcset="" />
+          <h2>{title}</h2>
+        </div>
+        <div
+          className="cross-close"
           onClick={() => {
             if (goto != "") {
               navigate(`/${goto}`);
@@ -37,8 +51,8 @@ export default function ShowModal({
             modalDisable(false);
           }}
         >
-          X
-        </h2>
+          <h2 className="modal-x">X</h2>
+        </div>
       </section>
       <section className="dialog-content">{children}</section>
     </dialog>,

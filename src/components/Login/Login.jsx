@@ -10,7 +10,9 @@ const loginObj = {
 };
 
 export default function Login() {
-  const randomIndex = Math.floor(Math.random() * login.img.length);
+  const [randomIndex] = useState(() =>
+    Math.floor(Math.random() * login.img.length)
+  );
   const [passwd, setPasswd] = useState({
     login: import.meta.env.VITE_USERNAME,
     password: import.meta.env.VITE_PASSWD,

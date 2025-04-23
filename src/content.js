@@ -10,13 +10,6 @@ export const footer = {
   button: "Login",
   buttona: "About us",
   question: "Questions/answers",
-  questions: [
-    "Are your items safe to use?",
-    "Can I return an invisible item?",
-    "What if my purchase disappears?",
-    "Can I request a oddity?",
-    "What happens if my item starts whispering?",
-  ],
   shopTitle: "Shop",
   shop: [
     { name: "Browse category", href: "/shop" },
@@ -97,30 +90,23 @@ export const login = {
 
 export const dialogContents = [
   {
-    title: `Are your items safe to use?`,
-    description: `Absolutely. While some of our items may seem unusual, 
-      they are carefully crafted with the highest standards 
-      of safety in mind. Just remember: always handle with curiosity.`,
+    title: `Are all servers on the list active?`,
+    description: `We do our best to keep the list up to date, but hey—Minecraft servers can vanish like endermen in the rain. If you stumble upon a quiet one, let us know and we'll investigate.`,
   },
   {
-    title: `Can I return an invisible item?`,
-    description: `Invisible items are tricky, but we'll work with you. If you feel like 
-      it's not meeting your expectations, contact us and we'll find a way to 
-      make things right—just be sure to describe it as best you can.`,
+    title: `How can I add my server to the list?`,
+    description: `Easy! Just click "Add Server," fill in a few details, and voilà—your portal is live. Make your description count—think of it as an invitation to a new world.`,
   },
   {
-    title: `What if my purchase disappears?`,
-    description: `If an item mysteriously vanishes, don't panic. It's likely just exploring other dimensions. 
-      Reach out to us, and we'll help guide it back to your world.`,
+    title: `Can I rate other servers?`,
+    description: `Absolutely. Your feedback helps fellow adventurers find the perfect realm. Vote, leave comments, and if a server sparks joy—let it know with a glowing review.`,
   },
   {
-    title: `Can I request a custom oddity?`,
-    description: `Yes! We offer bespoke oddities for the truly adventurous. Send us your wildest ideas, 
-      and we'll craft something uniquely suited to your needs—or perhaps your unspoken desires.`,
+    title: `Server isn’t showing on the page?`,
+    description: `Our homepage highlights the most popular and highly-rated servers—like a leaderboard of legends. Want to be seen? Rally your players and let those votes roll in!`,
   },
   {
-    title: `What happens if my item whispering?`,
-    description: `If your item starts whispering, you're in for an adventure. Listen closely—sometimes 
-      it's simply imparting wisdom. If it becomes too chatty, feel free to let us know, and we'll help restore quiet.`,
+    title: `What if a server breaks the rules?`,
+    description: `If a server seems off—breaking rules, acting shady, or running suspicious plugins—report it. We protect our community like a sacred totem. Justice will be swift (and pixelated).`,
   },
 ];

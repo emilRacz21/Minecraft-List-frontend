@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalType, setModalType] = useState("info");
   const [dialogContent, setDialogContent] = useState({
     title: "",
     description: "",
@@ -13,11 +14,13 @@ export default function Footer() {
   function handleselectedQuestion(index) {
     setDialogContent(dialogContents[index]);
     setIsModalOpen(true);
+    setModalType("info");
   }
   return (
     <section className="footer-cont">
       <ShowModal
         modalStatus={isModalOpen}
+        iconType={modalType}
         modalDisable={setIsModalOpen}
         title={dialogContent.title}
         closeModal={setIsModalOpen}
@@ -61,7 +64,7 @@ export default function Footer() {
           </div>
           <div className="footer-grid-1">
             <h4>{footer.question}</h4>
-            {footer.questions.map((items, index) => {
+            {dialogContents.map((items, index) => {
               return (
                 <p
                   key={index}
@@ -69,7 +72,7 @@ export default function Footer() {
                     handleselectedQuestion(index);
                   }}
                 >
-                  {items}
+                  {items.title}
                 </p>
               );
             })}

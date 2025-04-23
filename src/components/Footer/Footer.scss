@@ -37,7 +37,7 @@ $color-blue: rgb(226, 226, 226);
   inset: 0;
   background-image: radial-gradient(
       at bottom,
-      rgba(0, 123, 255, 0) 30%,
+      rgba(0, 0, 0, 0.429) 30%,
       rgb(20, 20, 20) 70%,
       rgb(20, 20, 20) 80%
     ),
@@ -81,7 +81,7 @@ $color-blue: rgb(226, 226, 226);
 
   .footer-btn {
     font-size: 1.2rem;
-    margin: 0 1rem;
+
     width: 5rem;
     height: 3rem;
     color: white;
@@ -97,6 +97,7 @@ $color-blue: rgb(226, 226, 226);
   }
   .footer-btn-no-border {
     @include button;
+    margin-left: 1rem;
     padding: 0.4rem 1rem;
     background-color: transparent;
     &:hover {
@@ -119,8 +120,8 @@ $color-blue: rgb(226, 226, 226);
     font-size: $font-footer;
   }
   img {
-    width: 6rem;
-    height: 4.9rem;
+    width: 6vw;
+    height: 4.4vw;
     place-items: center;
   }
 }

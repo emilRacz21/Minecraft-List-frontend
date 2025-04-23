@@ -24,6 +24,8 @@ const isStrongPassword = (password) => {
 export default function Create() {
   const containerRef = useRef(null);
   const [loginData, setLoginData] = useState(initialLogin);
+  const [modalType, setModalType] = useState("info");
+
   const [userData, setUserData] = useState(initialUser);
   const [repeatPassword, setRepeatPassword] = useState("");
   const [showCreateForm, setShowCreateForm] = useState(false);
@@ -40,6 +42,7 @@ export default function Create() {
       setShowCreateForm(true);
     } else {
       setErrorMsg("Please fill in your name and lastname.");
+      setModalType("error");
       setIsModalOpen(true);
     }
   };
@@ -49,12 +52,14 @@ export default function Create() {
 
     if (!validateFields(username, password, repeatPassword)) {
       setErrorMsg("Please fill in all fields.");
+      setModalType("error");
       setIsModalOpen(true);
       return;
     }
 
     if (password !== repeatPassword) {
       setErrorMsg("Passwords do not match.");
+      setModalType("error");
       setIsModalOpen(true);
       return;
     }
@@ -64,9 +69,11 @@ export default function Create() {
         "Password too weak. It must be at least 8 characters long and include a lowercase letter, uppercase letter, number, and special character."
       );
       setIsModalOpen(true);
+      setModalType("error");
       return;
     }
     setErrorMsg("");
+    setModalType("success");
     postLogin(userData, setErrorMsg);
     setIsModalOpen(true);
   };
@@ -81,8 +88,9 @@ export default function Create() {
     <Navbar title={["login", "New account"]}>
       <ShowModal
         modalStatus={isModalOpen}
+        iconType={modalType}
         modalDisable={setIsModalOpen}
-        title={errorMsg ? "You have an error!" : "User added successfully!"}
+        title={errorMsg ? "Warning" : "User added successfully!"}
         closeModal={setIsModalOpen}
         goto={
           userData.username && userData.password && !errorMsg ? "login" : ""
@@ -93,7 +101,7 @@ export default function Create() {
         ) : (
           <p>
             Thank you,{" "}
-            <strong style={{ color: "green" }}>
+            <strong style={{ color: "rgb(255, 196, 0)" }}>
               {loginData.name} {loginData.lastname}.
             </strong>{" "}
             Your account has been successfully created and added to our

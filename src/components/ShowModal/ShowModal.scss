@@ -10,7 +10,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 46vw;
-  height: 35vh;
+  height: auto;
   color: white;
   background-image: url("../../assets/images/texture_dark_oak.png");
   background-repeat: repeat;
@@ -79,22 +79,22 @@
 }
 .dialog-nav {
   display: flex;
-  padding: 0 3rem;
-  margin: auto 0;
-  margin-bottom: 0;
   justify-content: space-between;
+  padding: 1vw 3vw;
+
+  margin-bottom: 0;
 
   h2 {
-    font-family: "Minecraft";
+    text-transform: capitalize;
     text-shadow: 3px 6px 0px black;
     font-weight: 100;
-    font-size: 2.3vw;
+    font-size: 1.7vw;
     margin: 1vw 0;
   }
 }
 .dialog-content {
-  padding: 0 3vw;
-  margin: auto 0;
+  border-top: 2px solid rgb(255, 255, 255);
+  padding: 2vw 3vw;
 
   p {
     font-size: 1.6vw;
@@ -102,15 +102,45 @@
     text-align: justify;
   }
 }
-.modal-x {
-  cursor: pointer;
+
+.cross-close {
   transition: 0.3s ease;
+  background-color: rgb(88, 88, 88);
+  box-shadow: 0px 2px 0px 0px rgb(201, 199, 199) inset,
+    0px 2px 0px 0px rgba(41, 40, 40, 0.956);
+  width: 2.5vw;
+  margin: auto 0;
+  height: 2.5vw;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  .modal-x {
+    font-family: "Pixelify Sans";
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.8vw;
+    transition: 0.3s ease;
+  }
 
   &:hover {
-    transform: scale(1.3);
-    color: $font-color-main-green;
+    cursor: pointer;
+    background-color: rgb(110, 108, 108);
   }
 }
+
+.class-info {
+  display: flex;
+  flex-direction: row;
+  img {
+    height: 3vw;
+    margin-right: 0.3vw;
+  }
+  h2 {
+    color: rgb(255, 196, 0);
+  }
+}
+
 @media (max-width: 1150px) {
   .show-modal {
     width: 70%;
@@ -120,10 +150,6 @@
       justify-content: center;
       align-items: center;
 
-      h2 {
-        font-size: 1.7rem;
-        line-height: 2rem;
-      }
       .modal-x {
         margin-left: 2rem;
       }
