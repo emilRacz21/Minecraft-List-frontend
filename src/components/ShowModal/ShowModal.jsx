@@ -11,6 +11,8 @@ const icons = {
   success,
 };
 
+
+
 export default function ShowModal({
   modalStatus,
   iconType,
